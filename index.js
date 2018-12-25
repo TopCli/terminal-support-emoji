@@ -12,7 +12,6 @@ const POWERSHELL_CMD = "echo '\xE0\xA5\xA5' | measure -Character | Select-Object
  */
 function runSysCommand(command) {
     return new Promise((resolve, reject) => {
-        // TODO: Spawn with parent terminal
         const { error, stdout } = spawnSync("cmd", ["/c", command]);
         if (error) {
             return reject(error);
@@ -29,15 +28,15 @@ function runSysCommand(command) {
  * @returns {Promise<Boolean>}
  */
 async function supportEmoji() {
-    let CMD = BASH_CMD;
     if (process.platform === "win32") {
+        // eslint-disable-next-line
         const isPowershell = require("is-powershell");
-        if (isPowershell) {
-            CMD = POWERSHELL_CMD;
-        }
+        const termIsPowershell = await isPowershell();
+
+        return await runSysCommand(termIsPowershell ? POWERSHELL_CMD : BASH_CMD) === 2;
     }
 
-    return (await runSysCommand(CMD)) === 2;
+    return await runSysCommand(BASH_CMD) === 2;
 }
 
 module.exports = supportEmoji;
