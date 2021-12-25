@@ -27,7 +27,6 @@
     "url": "https://github.com/TopCli/terminal-support-emoji/issues"
   },
   "homepage": "https://github.com/TopCli/terminal-support-emoji",
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
