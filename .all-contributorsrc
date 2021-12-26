@@ -4,30 +4,7 @@
   ],
   "imageSize": 100,
   "commit": false,
-  "contributors": [
-    {
-      "login": "fraxken",
-      "name": "Gentilhomme",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4438263?v=4",
-      "profile": "https://www.linkedin.com/in/thomas-gentilhomme/",
-      "contributions": [
-        "code",
-        "doc",
-        "review",
-        "security",
-        "bug"
-      ]
-    },
-    {
-      "login": "Yoann",
-      "name": "Yoann",
-      "avatar_url": "https://avatars.githubusercontent.com/u/28066290?v=4",
-      "profile": "https://www.linkedin.com/in/yoann-buzenet/",
-      "contributions": [
-        "code"
-      ]
-    }
-  ],
+  "contributors": [],
   "contributorsPerLine": 7,
   "projectName": "terminal-support-emoji",
   "projectOwner": "TopCli",

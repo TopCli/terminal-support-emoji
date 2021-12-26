@@ -1,10 +1,10 @@
-// Require Node.js Dependencies
+// Import Node.js Dependencies
 import { spawnSync } from "child_process";
 
 // CONSTANTS
-const BASH_CMD = "echo -e '\xE0\xA5\xA5' | wc -m";
-const POWERSHELL_CMD =
-  "echo '\xE0\xA5\xA5' | measure -Character | Select-Object -expand Characters";
+const kBashCmd = "echo -e '\xE0\xA5\xA5' | wc -m";
+const kPowershellCmd = "echo '\xE0\xA5\xA5' | measure -Character | Select-Object -expand Characters";
+const kNumberOfChars = 12;
 
 /**
  * @func runSysCommand
@@ -12,14 +12,9 @@ const POWERSHELL_CMD =
  * @returns {Promise<Number>}
  */
 function runSysCommand(command) {
-  return new Promise((resolve, reject) => {
-    const { error, stdout } = spawnSync("cmd", ["/c", command]);
-    if (error) {
-      return reject(error);
-    }
+  const { stdout } = spawnSync("cmd", ["/C", command]);
 
-    return resolve(Number(stdout.toString()));
-  });
+  return Number(stdout.toString());
 }
 
 /**
@@ -30,14 +25,11 @@ function runSysCommand(command) {
  */
 export async function supportEmoji() {
   if (process.platform === "win32") {
-    // eslint-disable-next-line
-    const isPowershell = require("is-powershell");
+    const isPowershell = (await import("is-powershell")).default;
     const termIsPowershell = await isPowershell();
 
-    return (
-      (await runSysCommand(termIsPowershell ? POWERSHELL_CMD : BASH_CMD)) === 2
-    );
+    return runSysCommand(termIsPowershell ? kPowershellCmd : kBashCmd) === kNumberOfChars;
   }
 
-  return (await runSysCommand(BASH_CMD)) === 2;
+  return runSysCommand(kBashCmd) === kNumberOfChars;
 }
