@@ -17,6 +17,16 @@
         "security",
         "bug"
       ]
+    },
+    {
+      "login": "YoannBuzenet",
+      "name": "Yoann Buzenet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28066290?v=4",
+      "profile": "https://github.com/YoannBuzenet",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
