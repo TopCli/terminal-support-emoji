@@ -44,6 +44,6 @@
     "node": ">=14"
   },
   "optionalDependencies": {
-    "is-powershell": "^1.1.1"
+    "is-powershell": "^2.0.0"
   }
 }
