@@ -3,8 +3,6 @@
 ![V1.0](https://img.shields.io/badge/version-1.0.0-blue.svg)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fraxken/is-powershell/commit-activity)
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-[![Security Responsible Disclosure](https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg)](https://github.com/nodejs/security-wg/blob/master/processes/responsible_disclosure_template.md
-)
 
 Node.js - Detect if the terminal that execute your script support emoji or not (using the process.ppid).
 
