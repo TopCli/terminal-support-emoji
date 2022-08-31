@@ -11,15 +11,15 @@ Node.js - Detect if the terminal that execute your script support emoji or not (
 This package is available in the Node Package Repository and can be easily installed with [npm](https://docs.npmjs.com/getting-started/what-is-npm) or [yarn](https://yarnpkg.com).
 
 ```bash
-$ npm i terminal-support-emoji
+$ npm i @topcli/terminal-support-emoji
 # or
-$ yarn add terminal-support-emoji
+$ yarn add @topcli/terminal-support-emoji
 ```
 
 ## Usage example
 
 ```js
-import { supportEmoji } from "terminal-support-emoji";
+import { supportEmoji } from "@topcli/terminal-support-emoji";
 
 supportEmoji().then(console.log).catch(console.error);
 ```
