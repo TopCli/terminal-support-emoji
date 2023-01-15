@@ -1,8 +1,12 @@
 # terminal-support-emoji
 
-![V1.0](https://img.shields.io/badge/version-1.0.0-blue.svg)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fraxken/is-powershell/commit-activity)
-![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
+![version](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&url=https://raw.githubusercontent.com/TopCli/terminal-support-emoji/master/package.json&query=$.version&label=Version)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/TopCli/terminal-support-emoji/commit-activity)
+[![mit](https://img.shields.io/github/license/Naereen/StrapDown.js.svg?style=for-the-badge)](https://github.com/TopCli/terminal-support-emoji/blob/master/LICENSE)
+[![OpenSSF
+Scorecard](https://api.securityscorecards.dev/projects/github.com/TopCli/terminal-support-emoji/badge?style=for-the-badge)](https://api.securityscorecards.dev/projects/github.com/TopCli/terminal-support-emoji)
+![build](https://img.shields.io/github/actions/workflow/status/TopCli/terminal-support-emoji/node.js.yml?style=for-the-badge)
+
 
 Node.js - Detect if the terminal that execute your script support emoji or not (using the process.ppid).
 
